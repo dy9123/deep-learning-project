@@ -58,7 +58,7 @@ for i in range(epoch):
         init_value = last_state
         total_loss += loss
     total_loss /= (df_log.shape[0] // timestamp)
-    if (i + 1) % 100 == 0:
+    if (i + 1) % 2 == 0:
         print('epoch:', i + 1, 'avg loss:', total_loss)
 
 
