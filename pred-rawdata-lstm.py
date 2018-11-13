@@ -40,7 +40,7 @@ future_day = 50
 
 
 tf.reset_default_graph()
-modelnn = model.Model(0.01, num_layers, df_log.shape[1], size_layer, df_log.shape[1], dropout_rate)
+modelnn = LSTMmodel.Model(0.01, num_layers, df_log.shape[1], size_layer, df_log.shape[1], dropout_rate)
 sess = tf.InteractiveSession()
 sess.run(tf.global_variables_initializer())
 for i in range(epoch):
