@@ -140,7 +140,10 @@ plt.xticks(x_range_future[::60], date_ori[::60])
 plt.legend()
 plt.title('predict market')
 plt.show()
-
 plt.savefig('fig2.png')
 
-
+import sklearn as sk
+from sk.metrics import mean_squared_error
+A=df.iloc[:, 4]
+B=df_log[:, 3]
+mse = mean_squared_error(A, B)
