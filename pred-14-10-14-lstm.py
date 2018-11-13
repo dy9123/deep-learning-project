@@ -30,8 +30,8 @@ df_log = minmax.transform(df.iloc[:, 1:].astype('float32'))
 df_log = pd.DataFrame(df_log)
 
 
-num_layers = 5
-size_layer = 128
+num_layers = 4
+size_layer = 32
 timestamp = 1
 epoch = 500
 dropout_rate = 0.5
