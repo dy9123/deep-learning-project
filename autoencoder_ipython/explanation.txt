@@ -1,0 +1,2 @@
+This file contains the autoencoder ipython file. It chooses the model with the lowest validation error.
+

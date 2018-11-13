@@ -1,0 +1,1 @@
+This folder contains the output from the regulat autoencoder. It chooses the model with the best validation error

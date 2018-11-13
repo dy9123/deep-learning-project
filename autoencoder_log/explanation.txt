@@ -1,0 +1,1 @@
+This folder contains all the log file saved from the autoencoder. It chooses the model with the lowest validation error.

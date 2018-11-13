@@ -1,0 +1,1 @@
+This folder contains all the logs saved after training the stacked autoencoder. It saves the model with the lowest validation error. 
