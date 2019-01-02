@@ -108,7 +108,7 @@ init_value_forward = last_state[0]
 init_value_backward = last_state[1]
 output_predict[upper_b + 1: df_log.shape[0] + 1, :] = out_logits
 df_log.loc[df_log.shape[0]] = out_logits[-1, :]
-date_ori.append(date_ori[-1]+timedelta(days=1))
+date_ori.append(date_ori[-1]+timedelta(days=9))
 
 
 # In[8]:
@@ -120,7 +120,7 @@ for i in range(future_day - 1):
     init_value_backward = last_state[1]
     output_predict[df_log.shape[0], :] = out_logits[-1, :]
     df_log.loc[df_log.shape[0]] = out_logits[-1, :]
-    date_ori.append(date_ori[-1]+timedelta(days=1))
+    date_ori.append(date_ori[-1]+timedelta(days=9))
 
 
 # In[9]:
