@@ -1,4 +1,26 @@
-# deeplearning
- Time series forecasting can be viewed as a supervised learning problem. It has been historically modelled using ARMA-GARCH processes [1]. Stock prediction remains one of the most difficult time series forecasting problem due to the very large number of parameters involved directly or indirectly in the movement of a stock. We can separate the stock prediction problem in two scientific tasks: a dimensionality reduction allowing to extract a meaningful signal from a large feature set and a sequential model allowing predict the future of the series using the extracted signal.  Recent advances in statistical learning combined with a constantly growing computational power allowed the emergence of sequential models in deep learning like Hidden Markov Models or LSTM net which propose  new approaches for modelling time series. 
- Alternatively, dimensionality reduction is a machine learning task that was heavily studied in the recent years as it is the underlying mathematical problem behind collaborative filtering and recommender systems [2]. Other applications include word embedding [3], matrix reconstruction [4], sparse coding [5] or dictionary learning[6].\\
- This study attempts to use recent discoveries in statistical learning to tackle the stock prediction problem in an unconventional way. We first compare two dimensionality reduction techniques, namley the autoencoders and the stacked autoencoders to extract a powerful signal from a set of technical and fundamental features. We then use a reccurent neural network with LSTM cells to perform the prediction and finally attempt to improve our pipeline using a bidirectional LSTM.
+# stock-index-prediction
+This project is still in progress. We employed wavelet-autoencoder-LSTM as suggested by Bao, Yue and Rao.
+# Motivation
+In this project, we employed neural network to predict future stock index.
+# Data 
+We first examined our model on S&P 500 index. Later, we will move onto Hang Send Index.
+We used daily S&P 500 index, including its open price, close price, trading volume, etc.
+Moreover, we also used technical indicators and macro economy data.
+# Model
+We first employed wavelet transformation to reduce the noise of the data.
+We then tested regular autoencoder and stacked autoencoder to reduce the dimension.
+We then employed LSTM to predict future stock index.
+In addition, we employed batch normalization, gradient clipping to further improve our model.
+# Evaluation
+We report the final R^2 as the measure of our model.
+We also tried to convert it into a classification problem by predict whether index will go up, go down or remain the same.
+# Files Description
+Here is how files are named and stored
+Data file: GSPC, HSI, raw data
+Autoencoder: autoencoder****
+Stacked Autoencoder: st-***
+output from autoencoder:auto_result****
+output from stacked autoencoder:update_stresult****
+
+# Reference
+Bao, W., Yue, J., & Rao, Y. (2017). A deep learning framework for financial time series using stacked autoencoders and long-short term memory. PLoS One, 12(7), E0180944.
